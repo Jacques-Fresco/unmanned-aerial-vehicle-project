@@ -1,0 +1,54 @@
+.gallery {
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        justify-content: center; }
+    &__slider {
+        &Wrapper {
+            display: flex;
+            flex-wrap: nowrap; }
+        &Slide {
+            flex-shrink: 0;
+            position: relative;
+            padding: 0 0 66.6666%;
+            width: 100%;
+            opacity: .25;
+            figure {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0; }
+            img {
+                @include cover; }
+            &--active {
+                opacity: 1; } }
+        @media screen and (max-width: 1024px) {
+            width: 75%!important; }
+        @media screen and (max-width: 768px) {
+            width: 100%!important; } }
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        width: 7.5rem;
+        height: 7.5rem;
+        cursor: pointer;
+        &--prev {
+            left: 5rem;
+            border-top: 0.25rem solid var(--color-link);
+            border-left: 0.25rem solid var(--color-link);
+            transform: rotate(-45deg) translate3d(0,-50%,0); }
+        &--next {
+            right: 5rem;
+            border-top: 0.25rem solid var(--color-link);
+            border-right: 0.25rem solid var(--color-link);
+            transform: rotate(45deg) translate3d(0,-50%,0); }
+        &:hover {
+            border-color: var(--color-hover); }
+        &.swiper-button-disabled {
+            display: none; }
+        @media screen and (max-width: 768px) {
+            width: 5rem;
+            height: 5rem; } }
+    @media screen and (max-width: 768px) {
+        padding: 4rem 0; } }

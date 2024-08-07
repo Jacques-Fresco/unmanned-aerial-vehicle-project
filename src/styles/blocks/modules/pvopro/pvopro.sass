@@ -1,0 +1,33 @@
+.pvopro {
+    position: relative;
+    &__wrapper {
+        align-items: center;
+        padding: 10rem 0;
+        @media screen and (max-width: 768px) {
+            padding: 4rem 0; } }
+    &__info {
+        @media screen and (max-width: 768px) {
+            order: 1;
+            padding: 4rem 0 0;
+            width: 100%!important; } }
+    &__map {
+        position: relative;
+        padding: 0 0 0 $col;
+        @media screen and (max-width: 768px) {
+            order: 0;
+            padding: 0;
+            width: 100%!important; }
+        &::after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 2rem;
+            padding: 3rem 0 0;
+            width: 7.25rem;
+            height: 3rem;
+            background: url($url + 'zoom.svg') center top no-repeat;
+            background-size: 2.25rem;
+            font-size: var(--font-size-0);
+            text-align: center;
+            color: $wht;
+            content: 'Увеличить карту'; } } }

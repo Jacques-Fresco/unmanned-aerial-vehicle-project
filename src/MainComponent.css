@@ -1,0 +1,11 @@
+.swiper-button-prev, .swiper-button-next {
+    color: #d8981c;
+}
+
+.swiper.swiper-initialized.swiper-horizontal {
+    max-width: 1532px;
+}
+
+.swiper-slide.swiper-slide-active {
+    display: flex;
+}

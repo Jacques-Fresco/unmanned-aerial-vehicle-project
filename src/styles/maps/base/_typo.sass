@@ -1,0 +1,99 @@
+@mixin h1 {
+    font-size: var(--font-size-3);
+    font-weight: 700;
+    line-height: 1.905;
+    text-transform: uppercase;
+    letter-spacing: .125rem; }
+@mixin h2 {
+    font-size: var(--font-size-2);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .125rem; }
+@mixin h3 {
+    font-size: var(--font-size-1);
+    font-weight: 700; }
+@mixin h4 {
+    font-size: var(--font-size-0);
+    font-weight: 700;
+    text-transform: uppercase; }
+
+img {
+    width: 100%; }
+
+h1 {
+    @include h1; }
+h2 {
+    @include h2; }
+h3 {
+    @include h3; }
+h4 {
+    @include h4; }
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+        color: var(--color-hover); } }
+
+ul,ol {
+    li {
+        margin: .75rem 0;
+        list-style: none; } }
+li {
+    &.done,
+    &.list {
+        &::before {
+            margin: 0 1rem 0 0;
+            font-weight: 700;
+            color: var(--color-link);
+            content: '•'; } }
+    &.done {
+        &::before {
+            content: '✓'; } } }
+
+.text {
+    h1, h2, h3, h4 {
+        margin: 4rem 0 2rem;
+        color: var(--color-link);
+        &:first-child {
+            margin-top: 0; }
+        &:last-child {
+            margin-bottom: 0; } }
+    strong {
+        font-weight: 700;
+        color: var(--color-link); }
+    p {
+        margin: 2rem 0;
+        font-size: var(--font-size-1);
+        &.small {
+            font-size: var(--font-size-0);
+            opacity: .25; }
+        &.big {
+            font-size: var(--font-size-2); }
+        &:first-child {
+            margin-top: 0; }
+        &:last-child {
+            margin-bottom: 0; } }
+    .button {
+        margin-top: 2rem; }
+    dl {
+        margin: 2rem 0; }
+    dt {
+        margin: 2rem 0 .5rem;
+        font-size: var(--font-size-1);
+        font-weight: 700;
+        color: var(--color-link); }
+    dd {
+        font-size: var(--font-size-1); }
+    ul, ol {
+        margin: 2rem 0; }
+    li {
+        font-size: var(--font-size-1); }
+    ul:is(.table) {
+        margin: 3rem 0;
+        li {
+            strong {
+                display: inline-block;
+                width: 20rem; } } } }
+
